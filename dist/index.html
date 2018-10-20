@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/stylesheets/base.css">
+    <link rel="stylesheet" href="./assets/stylesheets/contacts.css">
+    <link rel="stylesheet" href="./assets/stylesheets/input.css">
+    <link rel="stylesheet" href="./assets/stylesheets/messages.css">
+    <link rel="stylesheet" href="./assets/stylesheets/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="main.js" async></script>
+</head>
+
+<body>
+
+    <div class="main-wrp">
+        <div class="section section--left" id="sidebar">
+            <form class="form form-search" id="search-form">
+                <input class="input input--search" type="text" placeholder="Search..." />
+            </form>
+            <div class="contacts" id="contacts">
+            </div>
+        </div>
+        <div class="section section--right">
+            <div class="mobile-header">
+                <div class="mobile-header__hamburger" id='hamburger'>
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="mobile-header__dialogue" id="current-dialogue">
+                    <img class="contact__avatar" src="./assets/images/favicon.png" />
+                    <p class="contact__name"></p>
+                </div>
+            </div>
+            <div class="messages" id="messages">
+            </div>
+            <form class="form form--message" id='message-form'>
+                <input disabled class="input input--message" type="text" placeholder="Click here to write something..." />
+                <button class="button button--message" type="submit">
+                    <i class="fab fa-telegram-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,98 @@
+:root {
+  --active-contact-color: rgb(137, 182, 255);
+  --light-grey: rgb(240, 240, 240);
+  --dark-grey: rgb(170, 170, 170);
+  --green: rgb(74, 175, 66);
+  --white: rgb(253, 253, 253);
+  --border: 1px solid var(--dark-grey);
+}
+
+body {
+  margin: 0;
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body,
+.input,
+.button {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+
+.main-wrp {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section--right {
+  flex-grow: 1;
+  justify-content: space-between;
+  min-width: 500px;
+}
+
+.section--left {
+  padding: 10px;
+  background-color: var(--light-grey);
+  border-right: var(--border);
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  @keyframes slide-right {
+    from {
+      width: 0;
+      padding: 65px 0 10px 0;
+    }
+    to {
+      width: 60%;
+      padding: 65px 10px 10px 10px;
+    }
+  }
+
+  @keyframes slide-left {
+    from {
+      width: 60%;
+      padding: 65px 10px 10px 10px;
+    }
+    to {
+      width: 0;
+      padding: 65px 0 10px 0;
+    }
+  }
+
+  .section--left {
+    position: absolute;
+    padding: 0;
+    width: 0px;
+    overflow: hidden;
+    z-index: 1;
+    border: 0;
+    box-shadow: 0 0 3px 1px #dddddd;
+    padding: 65px 0 10px 0;
+    animation-name: slide-left;
+    animation-duration: 1s;
+  }
+
+  .section--left.opened {
+    animation-name: slide-right;
+    animation-duration: 1s;
+    width: 60%;
+    padding: 65px 10px 10px 10px;
+  }
+
+  .section--right {
+    min-width: 300px;
+    max-height: 100vh;
+  }
+}

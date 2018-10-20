@@ -1,0 +1,41 @@
+.contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  height: calc(100vh - 36px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 15px;
+}
+
+.contacts__contact {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: fit-content;
+  align-items: center;
+  margin: 1px 0;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: grey;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact__avatar {
+  padding-right: 10px;
+  max-height: 50px;
+}
+
+.contacts__contact--active,
+.contacts__contact:hover {
+  background-color: var(--active-contact-color);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 768px) {
+  .contacts {
+    height: calc(100vh - 101px);
+  }
+}
