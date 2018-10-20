@@ -8,5 +8,7 @@ Scripts: `/src`
 
 ### Bot queries
 Mia Wallace `show quote`
+
 Obi-Wan Kenobi `<question>?`
+
 Walter White `convert <amount> <currency> to <currency>`
